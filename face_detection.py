@@ -28,7 +28,7 @@ while(True):
     faces = faceCascade.detectMultiScale(img, 1.3, 5)
     for x,y,w,h in faces:
         cv2.rectangle(img, (x,y), (x+w, y+h), (0,255,0), 6)
-        eyes = eyeCascade.detectMultiScale(gray)
+        eyes = eyeCascade.detectMultiScale(img)
         for (ex, ey,ew,eh) in eyes:
             cv2.rectangle(img, (ex, ey), (ex + ew, ey + eh), (0, 0, 255), 6)
 
